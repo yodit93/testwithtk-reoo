@@ -25,18 +25,16 @@ function findAllUnorderedListElements() {
 
 function prepareProjects(firstProject, secondProject, thirdProject) {
   let arr = [firstProject, secondProject, thirdProject];
-  let projects = [];
+  let str = "";
   for (let i = 0; i < arr.length; i++){
       if (arr[i].length > 20){
-        const project = document.createElement("p").appendChild(document.createTextNode(arr[i]));
-       projects.push(project);
+        str = "<p>" + arr[i] + "</p>";
       }else{
-        const project = document.createElement("span").appendChild(document.createTextNode(arr[i]));
-        projects.push(project);
+        str = "<span>" + arr[i] + "</span>";
       }
-      document.createElement("br"); 
+      str += "<br>";
   }
-  return projects;
+  return str;
 }
 
 
